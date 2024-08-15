@@ -34,27 +34,15 @@ Clone the repository to your local machine:
 
 `cd stock-management`
 
-### 3. **Install Dependencies**
-
-For the frontend (React):
-
-`cd client`  
-`npm install`
-
-For the backend (NestJS):
-
-`cd ../server`   
-`npm install` 
-
-### 4. **Run the Project**
+### 3. **Run the Project**
 
 Start the backend server:
 
 `cd server`      
-`npm run start`
+`npm start`
 
 
 Start the frontend application:
 
-`cd ../client`    
+`cd client`    
 `npm start`
