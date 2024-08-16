@@ -10,6 +10,6 @@ import { UsersController } from './users.controller'; // Create this controller
   ],
   providers: [UsersService],
   controllers: [UsersController],
-  exports: [UsersService], // Export UserService if needed in other modules
+  exports: [UsersService],
 })
 export class UserModule {}

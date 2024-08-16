@@ -1,26 +1,27 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8080'; // Replace with your backend API URL
+const BASE_URL = 'http://localhost:8080';
+const API_URL = 'https://financialmodelingprep.com/api/v3/quote-order';
+const API_KEY = 'wUB2f7IOChwQEbWwYneVqckqG1Oak2LV';
 
 export const getUserPortfolio = async (username) => {
-  const response = await axios.get(`${API_URL}/users/${username}/portfolio`);
+  const response = await axios.get(`${BASE_URL}/users/${username}/portfolio`);
   return response.data;
 };
 
 export const updatePortfolio = async (username, portfolio) => {
-  const response = await axios.post(`${API_URL}/users/${username}/portfolio`, portfolio);
+  const response = await axios.post(`${BASE_URL}/users/${username}/portfolio`, portfolio);
   return response.data;
 };
 
 export const deleteStockFromPortfolio = async (username, symbol) => {
-  const response = await axios.delete(`${API_URL}/users/${username}/portfolio/${symbol}`);
+  const response = await axios.delete(`${BASE_URL}/users/${username}/portfolio/${symbol}`);
   return response.data;
 };
 
 export const getStockInfo = async (symbol) => {
- // const response = await axios.get(`${API_URL}/stocks/${symbol}`);
  try {
-  const response = await fetch(`https://financialmodelingprep.com/api/v3/quote-order/${symbol}?apikey=wUB2f7IOChwQEbWwYneVqckqG1Oak2LV`);
+  const response = await fetch(`${API_URL}/${symbol}?apikey=${API_KEY}`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
