@@ -56,7 +56,6 @@ const SearchBar = () => {
             {stockInfo.name}
           </Title>
           <div>Symbol: {stockInfo.symbol}</div>
-          {/* No need to show price and exchange here */}
         </Card>
       )}
     </div>

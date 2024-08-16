@@ -45,9 +45,6 @@ const StockDetailsPage = () => {
       // Update the portfolio on the server
       await updatePortfolio(username, updatedPortfolio);
   
-      // Update local state
-      //setPortfolio(updatedPortfolio);
-  
       // Navigate back to the portfolio page
       navigate('/');
     } catch (error) {

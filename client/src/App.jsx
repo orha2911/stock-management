@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PortfolioPage from './PortfolioPage';
-import StockDetailsPage from './StockDetailsPage'; // Your stock details component
+import StockDetailsPage from './StockDetailsPage';
 
 const App = () => (
   <Router>
